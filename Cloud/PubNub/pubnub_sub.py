@@ -9,7 +9,7 @@ import time
 PUB_KEY = "pubnub_pub_key"
 SUB_KEY = "pubnub_sub_key"
 SEC_KEY = "pubnub_sec_key"
-CLIENT_ID = "laptop"
+CLIENT_ID = "pc-sysplay"
 
 # defining the api-endpoint
 URL = "mqtt.pndsn.com"

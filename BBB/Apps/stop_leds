@@ -1,0 +1,11 @@
+#BASE=/sys/devices/leds.4
+BASE=/sys/class
+
+echo none > ${BASE}/leds/beaglebone\:green\:usr0/trigger
+echo 0 > ${BASE}/leds/beaglebone\:green\:usr0/brightness
+echo none > ${BASE}/leds/beaglebone\:green\:usr1/trigger
+echo 0 > ${BASE}/leds/beaglebone\:green\:usr1/brightness
+echo none > ${BASE}/leds/beaglebone\:green\:usr2/trigger
+echo 0 > ${BASE}/leds/beaglebone\:green\:usr2/brightness
+echo none > ${BASE}/leds/beaglebone\:green\:usr3/trigger
+echo 0 > ${BASE}/leds/beaglebone\:green\:usr3/brightness

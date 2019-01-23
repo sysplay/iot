@@ -24,6 +24,14 @@ def on_message(client, userdata, msg):
 	print("message retain flag =", msg.retain)
 	data = json.loads(msg.payload.decode("utf-8"))
 	#print(data)
+	cmd = data["cmd"]
+	arg = data["arg"]
+	value = data["value"]
+	if cmd == "led":
+		print(cmd, arg, value)
+		led_set(int(arg), 1 if (value == "on") else 0)
+	else:
+		print("Unrecognized cmd")
 
 client = mqtt.Client(client_id = PUB_KEY + "/" + SUB_KEY + "/" + CLIENT_ID)
 client.connect(URL, 1883, 60)

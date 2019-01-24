@@ -13,7 +13,7 @@ duration = 5 # seconds
 
 def text_to_speech(text):
 	# your API key here
-	API_KEY = "AIzaSyBwU5q6m4XwrxGWsVT2EB9neUFlMaTHYQ8"
+	API_KEY = "gcp_api_key"
 
 	# defining the api-endpoint
 	URL = "https://texttospeech.googleapis.com/v1/text:synthesize" + "?key=" + API_KEY
@@ -47,7 +47,7 @@ def text_to_speech(text):
 
 def speech_to_text(recording):
 	# your API key here
-	API_KEY = "AIzaSyBwU5q6m4XwrxGWsVT2EB9neUFlMaTHYQ8"
+	API_KEY = "gcp_api_key"
 
 	# defining the api-endpoint
 	URL = "https://speech.googleapis.com/v1/speech:recognize" + "?key=" + API_KEY
@@ -102,5 +102,5 @@ def detected_callback():
 		sd.sleep(int(duration * 1000))
 
 print("Please say \"Smart Mirror\" to activate me.")
-detector = snowboydecoder.HotwordDetector("smart_mirror.pmdl", sensitivity=0.5, audio_gain=1)
+detector = snowboydecoder.HotwordDetector("smart_mirror.pmdl", sensitivity=0.6, audio_gain=1)
 detector.start(detected_callback)

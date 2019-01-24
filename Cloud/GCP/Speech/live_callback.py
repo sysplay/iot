@@ -14,7 +14,7 @@ def speech_to_text(recording):
 	print("Processing ...")
 
 	# your API key here
-	API_KEY = ""
+	API_KEY = "gcp_api_key"
 
 	# defining the api-endpoint
 	URL = "https://speech.googleapis.com/v1/speech:recognize" + "?key=" + API_KEY

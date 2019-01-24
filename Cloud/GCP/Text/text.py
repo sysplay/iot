@@ -14,7 +14,7 @@ if len(sys.argv) != 2:
 audio_file = sys.argv[1]
 
 # your API key here
-API_KEY = ""
+API_KEY = "gcp_api_key"
 
 # defining the api-endpoint
 URL = "https://texttospeech.googleapis.com/v1/text:synthesize" + "?key=" + API_KEY

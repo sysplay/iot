@@ -1,1 +1,0 @@
-export GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/SysPlay-c362f753c5b6.json

@@ -17,8 +17,8 @@ CLIENT_ID = "sbc-bbb"
 URL = "mqtt.pndsn.com"
 
 def on_message(client, userdata, msg):
-	print("message received ", str(msg.payload.decode("utf-8")))
-	#print("message received ", str(msg.payload))
+	print("message received =", str(msg.payload.decode("utf-8")))
+	#print("message received =", str(msg.payload))
 	print("message topic =", msg.topic)
 	print("message qos =", msg.qos)
 	print("message retain flag =", msg.retain)

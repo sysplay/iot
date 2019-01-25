@@ -101,6 +101,6 @@ def detected_callback():
 	with sd.RawInputStream(samplerate=fs, blocksize=duration*fs, channels=1, dtype='int16', callback=callback):
 		sd.sleep(int(duration * 1000))
 
-print("Please say \"Smart Mirror\" to activate me.")
-detector = snowboydecoder.HotwordDetector("smart_mirror.pmdl", sensitivity=0.6, audio_gain=1)
+print("Please say \"SysPlay\" to activate me.")
+detector = snowboydecoder.HotwordDetector("sysplay.pmdl", sensitivity=0.6, audio_gain=1)
 detector.start(detected_callback)

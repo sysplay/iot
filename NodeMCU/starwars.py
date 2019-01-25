@@ -6,14 +6,14 @@ def connect_to_ap():
     wlan.active(True)
     if not wlan.isconnected():
         print('connecting to network')
-        wlan.connect('dummy','956856')
+        wlan.connect('SID','PASSWORD')
         while not wlan.isconnected():
             pass
-    print('network config',wlan.cofig())
+    print('network config')
 
 def watch_starwars():
-    addr_info = socket.getaddrinfo("towel.blinkenlights.ln",23)
-    addr = add_info[0][-1]
+    addr_info = socket.getaddrinfo("towel.blinkenlights.nl", 23)
+    addr = addr_info[0][-1]
     s = socket.socket()
     s.connect(addr)
     while True:

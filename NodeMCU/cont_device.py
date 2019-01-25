@@ -25,8 +25,8 @@ def call_back_routine(feed, msg):
         print('action = {} '.format(action))
 
 ADAFRUIT_IO_URL = b'io.adafruit.com'
-ADAFRUIT_USERNAME = b'dshyam91'
-ADAFRUIT_IO_KEY = b'0df3c623101b4dc48de1d66d82d1d66d'
+ADAFRUIT_USERNAME = b'USER_NAME'
+ADAFRUIT_IO_KEY = b'AIO_KEY'
 ADAFRUIT_IO_FEEDNAME1 = b'gpio16'
 ADAFRUIT_IO_FEEDNAME2 = b'gpio2'
 # create a random MQTT clientID
@@ -47,7 +47,7 @@ def do_connect():
     wlan.active(True)
     if not wlan.isconnected():
         print('connecting to network...')
-        wlan.connect('shyam', '9652721286')
+        wlan.connect('SID', 'PASSWORD')
         while not wlan.isconnected():
             pass
     print('network config:', wlan.ifconfig())

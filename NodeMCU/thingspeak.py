@@ -3,9 +3,10 @@ import socket
 import ussl
 import time
 import dht
+import utime
 from machine import Pin
 
-API_KEY = "3PUNCXS9S3GOW2BF"
+API_KEY = "API_KEY"
 HOST = "api.thingspeak.com"
 MESUREMENT_INTERVAL = 5
 
@@ -14,7 +15,7 @@ def do_connect():
     wlan.active(True)
     if not wlan.isconnected():
         print('connecting to network...')
-        wlan.connect('shyam', '9652721286')
+        wlan.connect('SID', 'PASSWORD')
         while not wlan.isconnected():
             pass
     print('network config:', wlan.ifconfig())
@@ -46,6 +47,7 @@ def main():
         if p5.value() == 1:
             Vstat += 1
         current_time = time.time()
+        utime.sleep(2)
         d.measure()
         temp = d.temperature()  # eg. 23 (°C)
         humid = d.humidity()  # eg. 41 (% RH)

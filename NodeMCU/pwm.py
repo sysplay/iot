@@ -8,14 +8,9 @@ def pulse(l, t):
         time.sleep_ms(t)
 
 def main():
-    ledR = machine.PWM(machine.Pin(0))
-    ledG = machine.PWM(machine.Pin(4))
-    ledB = machine.PWM(machine.Pin(5))
+    led = machine.PWM(machine.Pin(2))
     for i in range(10):
-        pulse(ledR, 500)
-        pulse(ledG, 500)
-        pulse(ledB, 500)
-
+        pulse(led, 200)
 
 if __name__ == '__main__':
     main()
